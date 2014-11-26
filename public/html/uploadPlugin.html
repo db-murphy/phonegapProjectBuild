@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>插件发布</title> 
+	<script src="../framework/js/jquery.min.js"></script>
+	<script src="../framework/js/bootstrap.js"></script>
+	<script src="../framework/js/sea.js"></script>
+	<script src="../framework/js/map.js"></script>
+	<link rel="stylesheet" href="../framework/css/framework_main.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+</head>
+<body>	
+	<div class="container-fluid">
+		<h1>插件发布</h1>
+		<form id="pluginDetail">
+			<div class="form-group">
+		    	<label for="fileToUpload">选择插件</label>
+		    	<input type="file" id="fileToUpload">
+		  	</div>
+			<div class="formGroup">
+				<label>插件版本:</label>
+				<input type="text" class="form-control" id="pluginVersion">
+			</div>
+			<div class="formGroup">
+				<label>插件描述:</label>
+				<textarea id="pluginDescription" class="form-control" rows="3"></textarea>
+			</div>
+			<div class="formGroup">
+				<button id="publishPlugin" type="submit" class="btn btn-default">发布插件</button>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	//配置seajs根目录
+	seajs.config({
+		base: "../js"
+	});
+
+	//进入主模块
+	seajs.use('module_publishPlugin/publishPlugin.js');
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>打包</title> 
+	<script src="../framework/js/jquery.min.js"></script>
+	<script src="../framework/js/bootstrap.js"></script>
+	<script src="../framework/js/sea.js"></script>
+	<script src="../framework/js/map.js"></script>
+	<link rel="stylesheet" href="../framework/css/framework_main.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+</head>
+<body>	
+	<div class="container-fluid">
+		<h1>打包App</h1>
+		<form>
+			<div class="form-group">
+		    	<label for="fileToUpload">选择压缩包</label>
+		    	<input type="file" id="fileToUpload">
+		  	</div>
+			<div class="formGroup">
+				<button id="buildIpa" type="submit" class="btn btn-default">打包</button>
+				<a href="javascript:;" id="downLoad" class="btn btn-info disabled">下载项目</a>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	//配置seajs根目录
+	seajs.config({
+		base: "../js"
+	});
+
+	//进入主模块
+	seajs.use('module_buildIpa/buildIpa.js');
+</script>
+</html>

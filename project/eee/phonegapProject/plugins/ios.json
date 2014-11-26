@@ -1,0 +1,56 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "framework": {
+                "parents": {
+                    "Security.framework": [
+                        {
+                            "xml": "false",
+                            "count": 3
+                        }
+                    ],
+                    "CFNetwork.framework": [
+                        {
+                            "xml": "false",
+                            "count": 3
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"IosSocketsCommon\"><param name=\"ios-package\" value=\"IosSocketsCommon\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ChromeSocketsTcp\"><param name=\"ios-package\" value=\"ChromeSocketsTcp\" /></feature>",
+                            "count": 2
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.dalog.mmkdjjdkjd": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.dalog.kshdy": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        }
+    },
+    "dependent_plugins": {
+        "org.chromium.common": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.chromium.iossocketscommon": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        }
+    }
+}

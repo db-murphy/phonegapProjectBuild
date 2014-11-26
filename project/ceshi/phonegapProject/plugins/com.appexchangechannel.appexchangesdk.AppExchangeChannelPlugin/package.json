@@ -1,0 +1,17 @@
+{
+    "version": "0.0.9",
+    "name": "com.appexchangechannel.appexchangesdk.appexchangechannelplugin",
+    "cordova_name": "AppExchangeChannelPlugin",
+    "description": "A Cordova plugin for using the AppExchangeChannel SDK from a Cordova or Phonegap app.",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "appexchangechannel",
+        "sdk",
+        "android"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": []
+}

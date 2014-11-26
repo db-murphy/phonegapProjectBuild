@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>登陆</title> 
+	<script src="framework/js/jquery.min.js"></script>
+	<script src="framework/js/bootstrap.js"></script>
+	<script src="framework/js/sea.js"></script>
+	<script src="framework/js/map.js"></script>
+	<link rel="stylesheet" href="framework/css/framework_main.css" />
+	<link rel="stylesheet" href="css/common.css" />
+</head>
+<body>	
+	<div class="container-fluid">
+		<form role="form">
+			<div class="form-group">
+		    	<label for="userName">用户名:</label>
+		    	<input type="text" class="form-control" id="userName" placeholder="输入用户名">
+		 	</div>
+		  	<div class="form-group">
+		    	<label for="password">密码:</label>
+		    	<input type="password" class="form-control" id="password" placeholder="输入密码">
+		  	</div>
+		  	<div class="register">
+				<a href="html/register.html">注册</a>
+		  	</div>
+		  	<button id="login" type="submit" class="btn btn-default">登录</button>
+		</form>
+	</div>
+</body>
+<script>
+	/**
+	 *	配置基础路径
+	 */
+	seajs.config({
+	  base: "./js"
+	});
+
+	/**
+	 *	进入主模块
+	 */
+	seajs.use('module_user/login.js');
+</script>
+</html>
