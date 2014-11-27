@@ -6,6 +6,7 @@ define(function (require, exports, module) {
 	var variable = require('module_variables/variables');
 	var M = require('module_msg/Model');
 	var V = require('module_view/view');
+	require('../../framework/js/doT');
 
 	//创建loading
 	common.createLoadingDiv();
@@ -15,18 +16,18 @@ define(function (require, exports, module) {
 
 	//获取phonegap官网插件
 	M.httpActive({ }, 'POST', variable.HTTP_PORT.GETPHONEGAPPLUGIN_URL, 'json', function (data) {
-		V.showPhoneGapPluginList(data.msg);
+		V.showPluginList(data.msg, '#phonegapPluginList');
 	});
 
 	//获取部门插件
 	M.httpActive({ }, 'POST', variable.HTTP_PORT.OURTEAMPLUGIN_URL, 'json', function (data) {
-		V.showTeamPluginList(data.msg);
+		V.showPluginList(data.msg, '#teamPluginList');
 	});
 
-	//创见项目
+	//创建项目
 	$('#createBtn').click(function(){
 
-		var checkedPlugin = $('input:checked')
+		var checkedPlugin = $('input[type="checkbox"]:checked')
 			,projectType = $('input[type="radio"]:checked').val()
 			,pluginArr = []
 			,pluginStr;
@@ -61,8 +62,8 @@ define(function (require, exports, module) {
 		M.httpActive({
 			keyWord: key
 		}, 'POST', variable.HTTP_PORT.SEARCHPLUGIN_URL, 'json', function (data) {
-			V.showPhoneGapPluginList(data.msg.phonegapPlugins);
-			V.showTeamPluginList(data.msg.teamPlugins);
+			V.showPluginList(data.msg.phonegapPlugins, '#phonegapPluginList');
+			V.showPluginList(data.msg.teamPlugins, '#teamPluginList');
 		});
 		return false;
 	});

@@ -6,9 +6,19 @@
 	<script src="../framework/js/jquery.min.js"></script>
 	<script src="../framework/js/bootstrap.js"></script>
 	<script src="../framework/js/sea.js"></script>
-	<script src="../framework/js/map.js"></script>
 	<link rel="stylesheet" href="../framework/css/framework_main.css" />
 	<link rel="stylesheet" href="../css/common.css" />
+
+	<!--plugin模板列表模板-->
+	<script id="pluginListTmpl" type="text/x-dot-template">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="{{=it.pluginName}}">{{=it.pluginName}}
+			</label>
+		</div>
+	</script>
+	<!--plugin模板列表模板-->
+	
 </head>
 <body>
 	<div class="container">

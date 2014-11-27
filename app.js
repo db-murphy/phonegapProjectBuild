@@ -10,7 +10,7 @@ var session = require('express-session');
 var routerAPI = require('./routes/api');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://192.168.0.224:7000/mytest');
+mongoose.connect('mongodb://192.168.4.111:7000/mytest');
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
